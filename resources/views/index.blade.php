@@ -152,13 +152,13 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
-                                    <span class="text-blue-700 font-semibold">ver más</span>
+                                    <span class="text-blue-600 font-semibold">ver más</span>
                                 </p>
                             </div>
                             <div class="flex justify-between mt-3">
                                 <div>
-                                    <span class="bg-blue-700 text-white rounded-3xl px-3 py-1">MySQL</span>
-                                    <span class="bg-blue-700 text-white rounded-3xl px-3 py-1">PHP</span>
+                                    <span class="bg-blue-600 text-white rounded-3xl px-3 py-1">MySQL</span>
+                                    <span class="bg-blue-600 text-white rounded-3xl px-3 py-1">PHP</span>
                                 </div>
                                 <div>
                                     <i class="fa fa-map-marker"></i> Colombia

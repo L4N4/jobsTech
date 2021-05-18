@@ -8,31 +8,36 @@
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
-            <h2 class="text-gray-800" style="text-align: center; font-size:x-large; font-weight:bold">Registro</h2><br>
+            <h2 class="text-green-700" style="text-align: center; font-size:x-large; font-weight:bold">Registro</h2><br>
 
             <div>
                 {{-- <x-jet-label for="name" value="{{ __('Name') }}" /> --}}
-                <x-jet-input id="name" class="block mt-1 w-full text-sm text-green-600" type="text" name="role" :value="old('role')" placeholder="Selecione el rol" required autofocus autocomplete="name" />
+                {{-- <x-jet-input id="name" class="block mt-1 w-full text-sm text-green-600" type="text" name="role" :value="old('role')" placeholder="Selecione el rol" required autofocus autocomplete="name" /> --}}
+                <select class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm block mt-1 w-full text-sm text-gray-600" name="role" id="role">
+                    <option value="" disabled selected hidden>Selecciona la acción</option>
+                    <option value="reclutador">Buscar un talento</option>
+                    <option value="persona">Ser contratado</option>
+                </select>
             </div>
 
             <div class="mt-4">
                 {{-- <x-jet-label for="name" value="{{ __('Name') }}" /> --}}
-                <x-jet-input id="name" class="block mt-1 w-full text-sm text-green-600" type="text" name="name" :value="old('name')" placeholder="Nombre completo" required autofocus autocomplete="name" />
+                <x-jet-input id="name" class="block mt-1 w-full text-sm text-gray-600" type="text" name="name" :value="old('name')" placeholder="Nombre completo" required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
                 {{-- <x-jet-label for="email" value="{{ __('Email') }}" /> --}}
-                <x-jet-input id="email" class="block mt-1 w-full text-sm text-green-600" type="email" name="email" :value="old('email')" placeholder="Correo electrónico" required />
+                <x-jet-input id="email" class="block mt-1 w-full text-sm text-gray-600" type="email" name="email" :value="old('email')" placeholder="Correo electrónico" required />
             </div>
 
             <div class="mt-4">
                 {{-- <x-jet-label for="password" value="{{ __('Password') }}" /> --}}
-                <x-jet-input id="password" class="block mt-1 w-full text-sm text-green-600" type="password" name="password" placeholder="Contraseña" required autocomplete="new-password" />
+                <x-jet-input id="password" class="block mt-1 w-full text-sm text-gray-600" type="password" name="password" placeholder="Contraseña" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
                 {{-- <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" /> --}}
-                <x-jet-input id="password_confirmation" class="block mt-1 w-full text-sm text-green-600" type="password" name="password_confirmation" placeholder="Confirmar contraseña" required autocomplete="new-password" />
+                <x-jet-input id="password_confirmation" class="block mt-1 w-full text-sm text-gray-600" type="password" name="password_confirmation" placeholder="Confirmar contraseña" required autocomplete="new-password" />
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
@@ -53,8 +58,8 @@
             @endif
 
             <div class="flex items-center justify-center mt-4">
-                <x-jet-button style="background-color: #fd6d16" class="ml-4">
-                    {{ __('Register') }}
+                <x-jet-button  class="bg-blue-600 text-white">
+                    {{ __('Registrarme') }}
                 </x-jet-button>
             </div>
 
@@ -65,7 +70,7 @@
             </div>
 
             <div class="flex items-center justify-center mt-1">
-                <a class="underline text-xs text-gray-600 hover:text-gray-900" href="{{ route('login') }}" style="color: #2196f3">
+                <a class="underline text-xs text-gray-600 hover:text-gray-900" href="{{ route('login') }}" style="color: #1682db">
                     {{ __('Inicia sesión') }}
                 </a>
             </div>
