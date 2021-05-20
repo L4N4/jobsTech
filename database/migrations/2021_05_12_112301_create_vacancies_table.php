@@ -14,7 +14,22 @@ class CreateVacanciesTable extends Migration
     public function up()
     {
         Schema::create('vacancies', function (Blueprint $table) {
-            $table->id();
+            $table->increments('idVacancy');
+            $table->string('title');
+            $table->integer('experienceRequired');
+            $table->double('salary');
+            $table->string('location');
+            $table->string('currency');
+            $table->mediumText('descriptionVacancy');
+            $table->string('state');
+            $table->date('endDate');
+            
+            $table->unsignedInteger('idCategoryVacancy');
+            $table->foreign('idCategoryVacancy')->references('idCategoryVacancy')->on('category_vacancies');
+            
+            $table->unsignedInteger('idRecruiter');
+            $table->foreign('idRecruiter')->references('idRecruiter')->on('recruiters');
+
             $table->timestamps();
         });
     }
