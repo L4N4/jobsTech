@@ -22,7 +22,9 @@ class CertificationFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nameCertification' => $this->faker->name,
+            'link' => $this->faker->text(100),
+            'developer_id' => rand(1, 10),
         ];
     }
 }

@@ -22,7 +22,8 @@ class LevelLangFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'level' => $this->faker->name,
+            'language_id' => rand(1, 20)
         ];
     }
 }

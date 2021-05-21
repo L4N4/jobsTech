@@ -22,7 +22,8 @@ class EducationFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nameEducation' => $this->faker->name,
+            'level' => $this->faker->name,
         ];
     }
 }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Country extends Model
+class CountryVacancy extends Model
 {
     use HasFactory;
 
@@ -13,8 +13,8 @@ class Country extends Model
         'country'
     ];
 
-    // public function vacancies()
-    // {
-    //     return $this->hasMany(Vacancy::class);
-    // }
+    public function vacancies()
+    {
+        return $this->hasMany(Vacancy::class);
+    }
 }

@@ -139,11 +139,10 @@
         <div>
 
             <!-- Job List Start -->
-            <div class="bg-gray-200 text-gray-800 mx-10 rounded-md items-center border-2 border-blue-300">
-                <a href="job-single.html" class="">
-                    <x-vacancy-card />
-                </a>
-            </div>
+            
+                    {{-- <x-vacancy-card /> --}}
+                    <livewire:vacancies-card>
+                
 
 
         </div>

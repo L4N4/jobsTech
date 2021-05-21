@@ -22,15 +22,18 @@ class VacancyFactory extends Factory
     public function definition()
     {
         return [
-            'idVacancy' => rand(1, 30),
+            // 'id' => rand(1, 30),
             'title' => $this->faker->name,
             'experienceRequired' => $this->faker->numberBetween(0, 6),
             'salary' => $this->faker->randomFloat(2, 1, 1000000000),
-            'location' => $this->faker->country,
             'currency' => $this->faker->countryCode,
-            'descriptionVacancy' => $this->faker->sentence,
+            'descriptionVacancy' => $this->faker->text(1000),
             'state' => $this->faker->numberBetween(0, 1),
-            'endDate' => $this->faker->dateTimeBetween('+0 days', '+2 months')
+            'endDate' => $this->faker->dateTimeBetween('+0 days', '+2 months'),
+
+            'categoryvacancy_id' => rand(1, 5),
+            'recruiter_id' => rand(1, 8),
+            'countryvacancy_id' => rand(1, 30)
 
         ];
     }

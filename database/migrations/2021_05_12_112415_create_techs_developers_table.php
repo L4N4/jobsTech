@@ -15,6 +15,13 @@ class CreateTechsDevelopersTable extends Migration
     {
         Schema::create('techs_developers', function (Blueprint $table) {
             $table->id();
+            
+            $table->unsignedBigInteger('technology_id');
+            $table->foreign('technology_id')->references('id')->on('technologies');
+            
+            $table->unsignedBigInteger('developer_id');
+            $table->foreign('developer_id')->references('id')->on('developers');
+
             $table->timestamps();
         });
     }

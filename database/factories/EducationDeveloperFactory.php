@@ -22,7 +22,8 @@ class EducationDeveloperFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'education_id' => rand(1, 10),
+            'developer_id' => rand(1, 10),
         ];
     }
 }

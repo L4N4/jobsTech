@@ -14,7 +14,8 @@ class CreateCategoryVacanciesTable extends Migration
     public function up()
     {
         Schema::create('category_vacancies', function (Blueprint $table) {
-            $table->increments('idCategoryVacancy');
+            $table->id();
+            // $table->increments('idCategoryVacancy');
             $table->string('categoryName');
             $table->timestamps();
         });

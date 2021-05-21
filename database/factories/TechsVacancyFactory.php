@@ -22,7 +22,8 @@ class TechsVacancyFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'technology_id' => rand(1, 20),
+            'vacancy_id' => rand(1, 20)
         ];
     }
 }

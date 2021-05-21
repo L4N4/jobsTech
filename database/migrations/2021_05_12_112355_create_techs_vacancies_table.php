@@ -15,6 +15,13 @@ class CreateTechsVacanciesTable extends Migration
     {
         Schema::create('techs_vacancies', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('technology_id');
+            $table->foreign('technology_id')->references('id')->on('technologies');
+            
+            $table->unsignedBigInteger('vacancy_id');
+            $table->foreign('vacancy_id')->references('id')->on('vacancies');
+
             $table->timestamps();
         });
     }

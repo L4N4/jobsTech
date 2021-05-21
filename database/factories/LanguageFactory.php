@@ -22,7 +22,7 @@ class LanguageFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'language' => $this->faker->country,
         ];
     }
 }

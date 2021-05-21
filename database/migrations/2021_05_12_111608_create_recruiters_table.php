@@ -14,11 +14,12 @@ class CreateRecruitersTable extends Migration
     public function up()
     {
         Schema::create('recruiters', function (Blueprint $table) {
-            $table->increments('idRecruiter');
-            $table->string('nameCompany');
-            $table->text('descriptionCompany');
-            $table->string('websiteCompany', 100);
-            $table->text('photoCompany');
+            // $table->increments('idRecruiter');
+            $table->id();
+            $table->string('nameCompany')->nullable();
+            $table->text('descriptionCompany')->nullable();
+            $table->string('websiteCompany', 100)->nullable();
+            $table->text('photoCompany')->nullable();
             $table->timestamps();
         });
     }

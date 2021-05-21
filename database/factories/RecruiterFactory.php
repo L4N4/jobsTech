@@ -22,7 +22,11 @@ class RecruiterFactory extends Factory
     public function definition()
     {
         return [
-            //
+            // 'id' => rand(1, 30),
+            'nameCompany' => $this->faker->name,
+            'descriptionCompany' => $this->faker->sentence,
+            'websiteCompany' => $this->faker->name,
+            'photoCompany' => $this->faker->imageUrl(300, 300)
         ];
     }
 }
