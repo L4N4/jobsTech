@@ -140,7 +140,6 @@
 
             <!-- Job List Start -->
             
-                    {{-- <x-vacancy-card /> --}}
                     <livewire:vacancies-card>
                 
 

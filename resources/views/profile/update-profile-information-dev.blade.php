@@ -1,4 +1,7 @@
-@extends('layouts.footer')
+@extends('layouts.web')
+
+@section('content')
+
 <x-guest-layout>
 
     <style>
@@ -152,9 +155,9 @@
                         <select id="techsDev" class="mt-1 rounded block w-full text-sm text-gray-500" type="text"
                             name="techsDev" :value="old('techsDev')" placeholder="Digita o selecciona tus habilidades"
                             required>
-                            <option value="1">Illustrator</option>
-                            <option value="2">Java</option>
-                            <option value="2">PHP</option>
+                            <option value="Illustrator">Illustrator</option>
+                            <option value="Java">Java</option>
+                            <option value="PHP">PHP</option>
                         </select>
 
                         <x-jet-label class="mt-4 pt-4" for="project" value="{{ __('Proyectos destacados:') }}" />
@@ -310,7 +313,7 @@
 
                 <br>
                 <div class="flex items-center justify-center mt-4">
-                    <x-jet-button type="submit" style="background-color: #fd6d16" class="ml-4">
+                    <x-jet-button type="submit" style="background-color: #1682db" class="ml-4">
                         {{ __('Guardar cambios') }}
                     </x-jet-button>
                 </div>
@@ -321,4 +324,4 @@
     </div>
 
 </x-guest-layout>
-@section('footer')
+@endsection

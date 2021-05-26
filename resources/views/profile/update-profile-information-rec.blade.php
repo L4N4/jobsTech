@@ -1,11 +1,13 @@
-@extends('layouts.footer')
+@extends('layouts.web')
+
+@section('content')
+
 <x-guest-layout>
 
     <div class="flex items-center justify-center p-4 mt-10 ">
-        <div class="max-w-4xl  bg-white w-full rounded-lg shadow-xl">
-            <h2 class="text-gray-800" style="text-align: center; font-size:x-large; font-weight:bold">Editar mi
-                perfil</h2>
-            <h3 class="text-gray-800" style="text-align: center;  font-weight:bold">Reclutador</h3><br>
+        <div class="max-w-4xl bg-white w-full rounded-lg shadow-xl">
+            <h2 class="text-gray-800 text-center text-2xl font-bold">Editar mi perfil</h2>
+            <h3 class="text-gray-800 text-center font-bold">Reclutador</h3><br>
 
             <form method="POST" action="{{ route('register') }}">
                 @csrf
@@ -42,7 +44,7 @@
                     <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 p-4 mb-6">
                         <x-jet-label class="my-2 pt-4" for="descriptionCompany" value="{{ __('Descripción de la empresa:') }}" />
                         <textarea
-                            class="form-textarea block mt-1 w-full text-sm text-gray-500 resize-none border rounded-md"
+                            class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm block mt-1 w-full text-sm text-gray-600"
                             name="descriptionCompany" id="descriptionCompany" rows="5"
                             placeholder="Ingrese información general de la empresa..."></textarea>
                     </div>
@@ -51,7 +53,7 @@
 
                 <br>
                 <div class="flex items-center justify-center mt-4">
-                    <x-jet-button type="submit" style="background-color: #fd6d16" class="ml-4">
+                    <x-jet-button type="submit" style="background-color: #1682db" class="ml-4">
                         {{ __('Guardar cambios') }}
                     </x-jet-button>
                 </div>
@@ -62,4 +64,4 @@
     </div>
 
 </x-guest-layout>
-@section('footer')
+@endsection

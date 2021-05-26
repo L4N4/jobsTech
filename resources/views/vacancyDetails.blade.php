@@ -1,5 +1,11 @@
+@extends('layouts.web')
+
+@section('content')
+
+<h2 class="mt-6 text-gray-800 text-center text-2xl font-bold">Detalle de la vacante</h2>
+
 <div class="bg-gray-200 text-gray-800 my-6 mx-10 rounded-md items-center border-2 border-blue-300">
-    <a href="{{ route('vacancyDetails', $vacancy) }}" class="">
+    {{-- <a href="{{ route('vacancyDetails', $vacancy) }}" class=""> --}}
         <div class="p-4">
             <h2 class="text-2xl tracking-tight font-semibold">{{ $vacancy->title }}</h2>
             <div class="flex justify-between items-center mt-2">
@@ -9,8 +15,8 @@
             </div>
             <div class="mt-2">
                 <p>
-                    {{ $vacancy->get_excerpt }}...
-                    <span class="text-blue-600 font-semibold">ver más</span>
+                    {{ $vacancy->descriptionVacancy }}
+                    {{-- <span class="text-blue-600 font-semibold">ver más</span> --}}
                 </p>
             </div>
             <div class="flex justify-between mt-3">
@@ -22,6 +28,11 @@
                     <i class="fa fa-map-marker"></i> Colombia
                 </div>
             </div>
+            <a class="grid" href="#">
+                <div class="bg-gray-700 mt-5 text-white rounded-md py-1 w-64 place-self-center text-center font-bold text-lg">Aplicar</div>
+            </a>
         </div>
-    </a>
+    {{-- </a> --}}
 </div>
+
+@endsection
