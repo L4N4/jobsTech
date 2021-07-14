@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
+use App\Http\Controllers\Controller;
 use App\Models\Vacancy;
-use Illuminate\Http\Request;
+use App\Http\Requests\VacancyRequest;
 
-class VacancyController extends Controller
+class CreateVacancyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class VacancyController extends Controller
      */
     public function index()
     {
-        //
+        return view('vacancyAdmin');
     }
 
     /**
@@ -24,8 +25,20 @@ class VacancyController extends Controller
      */
     public function create()
     {
-        //
+        return view('vacancyRegistration');
     }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    // public function dropDownTechs()
+    // {
+    //     $techs = Vacancy::pluck('id', 'title');
+    //     return view('vacancy-registration', compact('techs'));
+    // }
+
 
     /**
      * Store a newly created resource in storage.
@@ -33,9 +46,16 @@ class VacancyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(VacancyRequest $request)
     {
-        //
+        //salvar
+        // $vacancy = Vacancy::create($request->all());
+        $vacancy = request()->except('_token');
+        Vacancy::insert($vacancy);
+
+
+        //retornar
+        return redirect()->with('msn', 'Vacante registrada con éxito');
     }
 
     /**
@@ -67,7 +87,7 @@ class VacancyController extends Controller
      * @param  \App\Models\Vacancy  $vacancy
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Vacancy $vacancy)
+    public function update(VacancyRequest $request, Vacancy $vacancy)
     {
         //
     }

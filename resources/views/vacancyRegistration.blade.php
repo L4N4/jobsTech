@@ -91,6 +91,11 @@
                                 <select
                                     class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm block mt-1 w-full text-sm text-gray-600"
                                     name="nameTech" id="nameTech">
+                                {{-- @foreach($techs as $tech)
+                                    <option value="{{ $tech->id }}">{{ $tech->title }}</option>
+
+                                @endforeach --}}
+
                                     <option value="" disabled selected hidden>Selecciona las tecnologías</option>
                                     <option value="Illustrator">Illustrator</option>
                                     <option value="Java">Java</option>

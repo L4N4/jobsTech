@@ -7,6 +7,10 @@
             <div>
 
                 <h2 class="text-gray-800 text-center text-2xl font-bold">Administración de vacantes</h2>
+<br><br>
+                <div class="flex justify-end mr-10">
+                    <a class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="{{ route('createVac') }}"><i class="fa fa-plus"></i> Agregar nueva vacante</a>
+                </div>
 
                 <table class="table-fixed m-8 text-center">
                     <thead>
@@ -25,15 +29,15 @@
                             <td class="border px-4 py-2">858</td>
                             <td class="border px-4 py-2">Link Candidatos</td>
                             <td class="border px-4 py-2">
-                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                    Ver
-                                </button>
-                                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                                    Edi
-                                </button>
-                                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                                    Del
-                                </button>
+                                <a class="m-1 bg-blue-500 hover:bg-blue-700 text-white py-2 px-2 cursor-pointer rounded">
+                                    <i class="fa fa-eye text-lg"></i>
+                                </a>
+                                <a class="m-1 bg-green-500 hover:bg-green-700 text-white py-2 px-2 cursor-pointer rounded">
+                                    <i class="fa fa-pencil text-lg"></i>
+                                </a>
+                                <a class="m-1 bg-red-500 hover:bg-red-700 text-white py-2 px-3 cursor-pointer rounded">
+                                    <i class="fa fa-trash text-lg"></i>
+                                </a>
                             </td>
                         </tr>
                         <tr class="bg-gray-100">

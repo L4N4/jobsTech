@@ -137,18 +137,10 @@
         </div>
 
         <div>
-
             <!-- Job List Start -->
-            
                     <livewire:vacancies-card>
-                
-
-
         </div>
     </div>
-
 </div>
-
 <!-- sidebar End -->
-
 @endsection
